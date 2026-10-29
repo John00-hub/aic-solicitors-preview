@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIC Solicitors — Legal Practitioners & Property Consultants</title>
+<meta name="description" content="AIC Solicitors — a full-service Nigerian law firm: corporate & commercial law, property & real estate, energy & natural resources, litigation and dispute resolution.">
+<style>
+  :root{
+    --navy:#0d1b2e; --navy2:#13263f; --ivory:#f7f4ed; --bronze:#b08d4f; --bronze-light:#d4b479;
+    --text:#2a2f38; --muted:#6b7280;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--text);background:var(--ivory);line-height:1.65;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  /* top bar */
+  .topbar{background:var(--navy);color:#cfd8e3;font-size:13px;padding:8px 0;letter-spacing:.4px;}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  /* header */
+  header{background:var(--navy2);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.35);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
+  .logo{color:var(--ivory);font-size:21px;letter-spacing:1px;font-weight:bold;}
+  .logo span{color:var(--bronze-light);}
+  .logo small{display:block;font-size:10.5px;letter-spacing:2.6px;color:#8fa1b8;font-weight:normal;text-transform:uppercase;margin-top:2px;}
+  nav.menu a{color:#d7deea;text-decoration:none;font-size:14.5px;margin-left:22px;font-family:Arial,Helvetica,sans-serif;}
+  nav.menu a:hover{color:var(--bronze-light);}
+  @media(max-width:760px){nav.menu{display:none;}}
+  /* hero */
+  .hero{background:linear-gradient(135deg,#0d1b2e 0%,#13263f 55%,#1a3353 100%);color:var(--ivory);padding:92px 0 86px;position:relative;overflow:hidden;}
+  .hero::after{content:"§";position:absolute;right:-30px;bottom:-90px;font-size:420px;color:rgba(176,141,79,.08);line-height:1;}
+  .hero .kicker{color:var(--bronze-light);letter-spacing:3.5px;font-size:12.5px;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;margin-bottom:18px;}
+  .hero h1{font-size:46px;line-height:1.15;max-width:720px;font-weight:normal;}
+  .hero h1 em{color:var(--bronze-light);font-style:normal;}
+  .hero p{max-width:620px;margin-top:20px;font-size:17.5px;color:#c9d3e0;}
+  .btnrow{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:14px 30px;border-radius:3px;text-decoration:none;font-size:15px;font-family:Arial,Helvetica,sans-serif;letter-spacing:.4px;}
+  .btn-gold{background:var(--bronze);color:#fff;}
+  .btn-gold:hover{background:var(--bronze-light);color:var(--navy);}
+  .btn-line{border:1px solid #5a6e88;color:var(--ivory);}
+  .btn-line:hover{border-color:var(--bronze-light);color:var(--bronze-light);}
+  @media(max-width:760px){.hero h1{font-size:32px;}.hero{padding:64px 0;}}
+  /* strip */
+  .strip{background:var(--bronze);color:#fff;padding:26px 0;}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;}
+  .strip b{display:block;font-size:26px;}
+  .strip span{font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;opacity:.92;}
+  @media(max-width:760px){.strip .wrap{grid-template-columns:repeat(2,1fr);}}
+  /* sections */
+  section{padding:76px 0;}
+  .sec-k{color:var(--bronze);letter-spacing:3px;font-size:12px;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;margin-bottom:10px;}
+  h2{font-size:33px;color:var(--navy);font-weight:normal;margin-bottom:18px;}
+  .lead{font-size:17px;color:#4b5563;max-width:760px;}
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start;margin-top:10px;}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr;}}
+  .about-grid p{margin-bottom:15px;color:#3c4452;}
+  .principal{background:var(--navy);color:var(--ivory);padding:34px 30px;border-top:4px solid var(--bronze);}
+  .principal h3{font-size:20px;color:var(--bronze-light);margin-bottom:4px;}
+  .principal .role{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;color:#8fa1b8;margin-bottom:16px;}
+  .principal p{font-size:14.5px;color:#c9d3e0;margin-bottom:12px;}
+  /* practice */
+  .practice{background:#fff;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px;}
+  @media(max-width:820px){.cards{grid-template-columns:1fr;}}
+  .card{background:var(--ivory);border:1px solid #e5e0d4;border-top:3px solid var(--bronze);padding:28px 24px;}
+  .card .ic{font-size:26px;margin-bottom:12px;}
+  .card h3{font-size:18.5px;color:var(--navy);margin-bottom:9px;}
+  .card p{font-size:14.5px;color:var(--muted);}
+  /* property banner */
+  .prop{background:linear-gradient(120deg,#13263f,#0d1b2e);color:var(--ivory);}
+  .prop-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+  @media(max-width:820px){.prop-grid{grid-template-columns:1fr;}}
+  .prop h2{color:var(--ivory);}
+  .prop p{color:#c9d3e0;margin-bottom:14px;}
+  .prop ul{list-style:none;margin-top:6px;}
+  .prop li{padding:10px 0 10px 30px;position:relative;color:#dde5ef;font-size:15.5px;border-bottom:1px solid rgba(255,255,255,.08);}
+  .prop li::before{content:"✓";position:absolute;left:4px;color:var(--bronze-light);}
+  /* why */
+  .why .cards{grid-template-columns:repeat(4,1fr);}
+  @media(max-width:820px){.why .cards{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.why .cards{grid-template-columns:1fr;}}
+  /* contact */
+  .contact{background:#fff;}
+  .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:30px;}
+  @media(max-width:820px){.c-grid{grid-template-columns:1fr;}}
+  .c-box{background:var(--ivory);border:1px solid #e5e0d4;padding:30px;}
+  .c-box h3{color:var(--navy);font-size:19px;margin-bottom:14px;}
+  .c-box p{font-size:15px;color:#4b5563;margin-bottom:10px;}
+  .wa{display:inline-block;margin-top:10px;background:#1fa855;color:#fff;padding:14px 28px;border-radius:3px;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:15px;}
+  .wa:hover{background:#178a45;}
+  /* footer */
+  footer{background:var(--navy);color:#8fa1b8;padding:44px 0 30px;font-size:13.5px;}
+  footer .flogo{color:var(--ivory);font-size:18px;letter-spacing:1px;margin-bottom:8px;}
+  footer .flogo span{color:var(--bronze-light);}
+  .disclaimer{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:#6d7f96;font-family:Arial,Helvetica,sans-serif;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div>Legal Practitioners &amp; Property Consultants</div>
+    <div>Mon – Fri: 9:00am – 5:00pm</div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">AIC <span>SOLICITORS</span><small>Legal Practitioners · Nigeria</small></div>
+    <nav class="menu">
+      <a href="#about">The Firm</a>
+      <a href="#practice">Practice Areas</a>
+      <a href="#property">Property Services</a>
+      <a href="#why">Why AIC</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Counsel You Can Build On</div>
+    <h1>Seasoned legal counsel for <em>business, property</em> and the matters that matter.</h1>
+    <p>AIC Solicitors is a full-service Nigerian law practice advising companies, investors, families and property owners with the diligence of advocates and the judgment of advisers.</p>
+    <div class="btnrow">
+      <a class="btn btn-gold" href="https://wa.me/2347036035930?text=Good%20day%2C%20I%20would%20like%20to%20consult%20AIC%20Solicitors.">Request a Consultation</a>
+      <a class="btn btn-line" href="#practice">Our Practice Areas</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>15+</b><span>Years in Practice</span></div>
+    <div><b>6</b><span>Core Practice Areas</span></div>
+    <div><b>100s</b><span>Of Matters Handled</span></div>
+    <div><b>1</b><span>Standard: Excellence</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-k">The Firm</div>
+    <h2>A practice built on diligence, discretion and results.</h2>
+    <div class="about-grid">
+      <div>
+        <p>AIC Solicitors serves a broad clientele of corporations, entrepreneurs, financial institutions, families and property investors. Our work joins two disciplines that rarely sit in one firm: rigorous legal practice and deep, practical knowledge of the Nigerian property market.</p>
+        <p>From incorporation and commercial agreements to land acquisition, title perfection, estate administration and courtroom advocacy, the firm offers clients a single trusted point of counsel for both their enterprises and their assets.</p>
+        <p>We hold a simple conviction: a client's matter deserves the principal's attention. Every brief in this firm is handled with the seniority, candour and urgency it would receive if it were our own.</p>
+      </div>
+      <div class="principal">
+        <h3>Barr. Afolabi Alabi</h3>
+        <div class="role">Principal Partner</div>
+        <p>The firm is led by its Principal Partner, Barr. Afolabi Alabi, a graduate of the University of Lagos and a legal practitioner of long standing with extensive experience across corporate and commercial practice, property and real estate transactions, and dispute resolution.</p>
+        <p>His dual grounding in law and property consultancy gives clients counsel that is not merely correct on paper, but commercially sound in the real world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="practice" id="practice">
+  <div class="wrap">
+    <div class="sec-k">Practice Areas</div>
+    <h2>What we do for our clients.</h2>
+    <p class="lead">Six core areas of practice, delivered with the thoroughness of specialists.</p>
+    <div class="cards">
+      <div class="card"><div class="ic">🏢</div><h3>Corporate &amp; Commercial Law</h3><p>Incorporation, regulatory compliance, commercial contracts, due diligence and ongoing counsel for businesses at every stage.</p></div>
+      <div class="card"><div class="ic">🏠</div><h3>Property &amp; Real Estate</h3><p>Land acquisition, title verification and perfection, leases, conveyancing and property development transactions handled end to end.</p></div>
+      <div class="card"><div class="ic">⚖️</div><h3>Litigation &amp; Dispute Resolution</h3><p>Firm, strategic advocacy before Nigerian courts and tribunals, with settlement pursued where it serves the client better than war.</p></div>
+      <div class="card"><div class="ic">⛽</div><h3>Energy &amp; Natural Resources</h3><p>Advisory and transactional support for participants in Nigeria's energy and natural resources sector.</p></div>
+      <div class="card"><div class="ic">📜</div><h3>Probate, Wills &amp; Estate Administration</h3><p>Wills, letters of administration, estate planning and the orderly transfer of family property across generations.</p></div>
+      <div class="card"><div class="ic">🤝</div><h3>Debt Recovery &amp; Secured Transactions</h3><p>Structured, lawful recovery of debts and enforcement of securities for businesses and individuals.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="prop" id="property">
+  <div class="wrap">
+    <div class="prop-grid">
+      <div>
+        <div class="sec-k">The AIC Advantage</div>
+        <h2>Where law meets property.</h2>
+        <p>Few firms combine courtroom competence with genuine property market experience. AIC Solicitors does both, which is why clients trust the firm not only to paper their transactions, but to protect them.</p>
+        <p>Before you buy, build or lease, let the firm look first.</p>
+      </div>
+      <div>
+        <ul>
+          <li>Pre-purchase title investigation and verification</li>
+          <li>Perfection of title: Governor's consent, registration, stamping</li>
+          <li>Drafting and review of deeds, leases and development agreements</li>
+          <li>Protection against fraudulent land transactions</li>
+          <li>Property dispute resolution and recovery of premises</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-k">Why AIC Solicitors</div>
+    <h2>The qualities clients stay for.</h2>
+    <div class="cards">
+      <div class="card"><div class="ic">🎓</div><h3>Seasoned Counsel</h3><p>Led by a Principal Partner with long standing at the Nigerian Bar.</p></div>
+      <div class="card"><div class="ic">🔍</div><h3>Thoroughness</h3><p>Every document read, every title searched, every angle considered.</p></div>
+      <div class="card"><div class="ic">🤫</div><h3>Discretion</h3><p>Client affairs are handled with complete confidentiality, always.</p></div>
+      <div class="card"><div class="ic">📞</div><h3>Accessibility</h3><p>Direct access to counsel, clear updates, no silence between them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-k">Contact</div>
+    <h2>Brief the firm.</h2>
+    <div class="c-grid">
+      <div class="c-box">
+        <h3>Speak with us</h3>
+        <p>Whether the matter concerns your business, your property or your family's interests, the first conversation costs nothing.</p>
+        <p><b>Phone / WhatsApp:</b> 0703 603 5930</p>
+        <a class="wa" href="https://wa.me/2347036035930?text=Good%20day%2C%20I%20would%20like%20to%20consult%20AIC%20Solicitors.">💬 Chat with the Firm on WhatsApp</a>
+      </div>
+      <div class="c-box">
+        <h3>Our commitment</h3>
+        <p>Enquiries are acknowledged promptly and handled with the discretion and seriousness the firm is known for.</p>
+        <p>Consultations are available in person or virtually, at the client's convenience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flogo">AIC <span>SOLICITORS</span></div>
+    <div>Legal Practitioners &amp; Property Consultants · Nigeria</div>
+    <div class="disclaimer">
+      This is a complimentary design preview prepared for the consideration of AIC Solicitors. It is not the firm's official website and has not been published or endorsed by the firm. All content herein is illustrative, drawn from publicly available information, and remains fully subject to the firm's review, correction and approval. Prepared by Olamide · Legal Web Developer.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
